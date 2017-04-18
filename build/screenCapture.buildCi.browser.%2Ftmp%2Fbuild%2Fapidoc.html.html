@@ -1,0 +1,1532 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/yakovkhalinsky/backblaze-b2">backblaze-b2 (v1.0.0)</a>
+</h1>
+<h4>Node.js Library for the Backblaze B2 Storage Service</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backblaze-b2">module backblaze-b2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.backblaze-b2">
+            function <span class="apidocSignatureSpan"></span>backblaze-b2
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2">
+            function <span class="apidocSignatureSpan">backblaze-b2.</span>b2
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.toString">
+            function <span class="apidocSignatureSpan">backblaze-b2.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backblaze-b2.</span>b2.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backblaze-b2.</span>headers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backblaze-b2.</span>request</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backblaze-b2.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backblaze-b2.b2">module backblaze-b2.b2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.b2">
+            function <span class="apidocSignatureSpan">backblaze-b2.</span>b2
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backblaze-b2.b2.prototype">module backblaze-b2.b2.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.authorize">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>authorize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.cancelLargeFile">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>cancelLargeFile
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.createBucket">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>createBucket
+            <span class="apidocSignatureSpan">(bucketName, bucketType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.deleteBucket">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>deleteBucket
+            <span class="apidocSignatureSpan">(bucketId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.deleteFileVersion">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>deleteFileVersion
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.downloadFileById">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>downloadFileById
+            <span class="apidocSignatureSpan">(fileId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.downloadFileByName">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>downloadFileByName
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.finishLargeFile">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>finishLargeFile
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.getFileInfo">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>getFileInfo
+            <span class="apidocSignatureSpan">(fileId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.getUploadPartUrl">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>getUploadPartUrl
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.getUploadUrl">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>getUploadUrl
+            <span class="apidocSignatureSpan">(bucketId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.hideFile">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>hideFile
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.listBuckets">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listBuckets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.listFileNames">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listFileNames
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.listFileVersions">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listFileVersions
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.listParts">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listParts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.listUnfinishedLargeFiles">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listUnfinishedLargeFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.startLargeFile">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>startLargeFile
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.updateBucket">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>updateBucket
+            <span class="apidocSignatureSpan">(bucketId, bucketType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.uploadFile">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>uploadFile
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.b2.prototype.uploadPart">
+            function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>uploadPart
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>BUCKET_TYPES</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backblaze-b2.headers">module backblaze-b2.headers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.headers.addBzHeaders">
+            function <span class="apidocSignatureSpan">backblaze-b2.headers.</span>addBzHeaders
+            <span class="apidocSignatureSpan">(headers, targetObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.headers.addInfoHeaders">
+            function <span class="apidocSignatureSpan">backblaze-b2.headers.</span>addInfoHeaders
+            <span class="apidocSignatureSpan">(options, info)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backblaze-b2.request">module backblaze-b2.request</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.request.getInstance">
+            function <span class="apidocSignatureSpan">backblaze-b2.request.</span>getInstance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.request.sendRequest">
+            function <span class="apidocSignatureSpan">backblaze-b2.request.</span>sendRequest
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.request.setup">
+            function <span class="apidocSignatureSpan">backblaze-b2.request.</span>setup
+            <span class="apidocSignatureSpan">(requestObject)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backblaze-b2.utils">module backblaze-b2.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.utils.getAuthHeaderObject">
+            function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getAuthHeaderObject
+            <span class="apidocSignatureSpan">(accountId, applicationKey)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.utils.getAuthHeaderObjectWithToken">
+            function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getAuthHeaderObjectWithToken
+            <span class="apidocSignatureSpan">(b2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.utils.getProcessFileSuccess">
+            function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getProcessFileSuccess
+            <span class="apidocSignatureSpan">(deferred)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.utils.getUrlEncodedFileName">
+            function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getUrlEncodedFileName
+            <span class="apidocSignatureSpan">(fileName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.utils.parseJson">
+            function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>parseJson
+            <span class="apidocSignatureSpan">(jsonString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.utils.processResponseGeneric">
+            function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>processResponseGeneric
+            <span class="apidocSignatureSpan">(deferred)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.utils.saveAuthContext">
+            function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>saveAuthContext
+            <span class="apidocSignatureSpan">(context, authResponse)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backblaze-b2" id="apidoc.module.backblaze-b2">module backblaze-b2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.backblaze-b2" id="apidoc.element.backblaze-b2.backblaze-b2">
+        function <span class="apidocSignatureSpan"></span>backblaze-b2
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function B2(options) {
+    this.accountId = options.accountId;
+    this.applicationKey = options.applicationKey;
+    this.authorizationToken = null;
+    this.apiUrl = null;
+    this.downloadUrl = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2" id="apidoc.element.backblaze-b2.b2">
+        function <span class="apidocSignatureSpan">backblaze-b2.</span>b2
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function B2(options) {
+    this.accountId = options.accountId;
+    this.applicationKey = options.applicationKey;
+    this.authorizationToken = null;
+    this.apiUrl = null;
+    this.downloadUrl = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.toString" id="apidoc.element.backblaze-b2.toString">
+        function <span class="apidocSignatureSpan">backblaze-b2.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.getAuthHeaderObject = function(accountId, applicationKey) {
+if (!accountId) {
+    throw new Error('Invalid accountId');
+}
+if (!applicationKey) {
+    throw new Error('Invalid applicationKey');
+}
+var base64 = new Buffer(accountId + ':' + applicationKey).<span class="apidocCodeKeywordSpan">toString</span>('base64
+');
+return {
+    Authorization: 'Basic ' + base64
+};
+};
+
+exports.getAuthHeaderObjectWithToken = function(b2) {
+if (!b2) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backblaze-b2.b2" id="apidoc.module.backblaze-b2.b2">module backblaze-b2.b2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.b2" id="apidoc.element.backblaze-b2.b2.b2">
+        function <span class="apidocSignatureSpan">backblaze-b2.</span>b2
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function B2(options) {
+    this.accountId = options.accountId;
+    this.applicationKey = options.applicationKey;
+    this.authorizationToken = null;
+    this.apiUrl = null;
+    this.downloadUrl = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backblaze-b2.b2.prototype" id="apidoc.module.backblaze-b2.b2.prototype">module backblaze-b2.b2.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.authorize" id="apidoc.element.backblaze-b2.b2.prototype.authorize">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>authorize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorize = function () {
+    return actions.auth.authorize(this, this.accountId, this.applicationKey);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// create b2 object instance
+var b2 = new B2({
+    accountId: 'accountId',
+    applicationKey: 'applicationKey'
+});
+
+// authorize with provided credentials
+b2.<span class="apidocCodeKeywordSpan">authorize</span>();  // returns promise
+
+// create bucket
+b2.createBucket(
+  bucketName,
+  bucketType // one of `allPublic`, `allPrivate`
+);  // returns promise
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.cancelLargeFile" id="apidoc.element.backblaze-b2.b2.prototype.cancelLargeFile">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>cancelLargeFile
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancelLargeFile = function (args) {
+    return actions.file.cancelLargeFile(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // finish large file
+    b2.finishLargeFile({
+      fileId: 'fileId',
+      partSha1Array: [partSha1Array] // array of sha1 for each part
+    }) // returns promise
+
+    // cancel large file
+    b2.<span class="apidocCodeKeywordSpan">cancelLargeFile</span>({
+      fileId: 'fileId'
+    }) // returns promise
+
+
+### Authors
+* Yakov Khalinsky (@yakovkhalinsky)
+* Ivan Kalinin (@IvanKalinin) at Isolary
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.createBucket" id="apidoc.element.backblaze-b2.b2.prototype.createBucket">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>createBucket
+        <span class="apidocSignatureSpan">(bucketName, bucketType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBucket = function (bucketName, bucketType) {
+    return actions.bucket.create(this, bucketName, bucketType);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    applicationKey: 'applicationKey'
+});
+
+// authorize with provided credentials
+b2.authorize();  // returns promise
+
+// create bucket
+b2.<span class="apidocCodeKeywordSpan">createBucket</span>(
+  bucketName,
+  bucketType // one of `allPublic`, `allPrivate`
+);  // returns promise
+
+// delete bucket
+b2.deleteBucket(bucketId);  // returns promise
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.deleteBucket" id="apidoc.element.backblaze-b2.b2.prototype.deleteBucket">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>deleteBucket
+        <span class="apidocSignatureSpan">(bucketId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteBucket = function (bucketId) {
+    return actions.bucket.delete(this, bucketId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// create bucket
+b2.createBucket(
+  bucketName,
+  bucketType // one of `allPublic`, `allPrivate`
+);  // returns promise
+
+// delete bucket
+b2.<span class="apidocCodeKeywordSpan">deleteBucket</span>(bucketId);  // returns promise
+
+// list buckets
+b2.listBuckets();  // returns promise
+
+// update bucket2
+b2.updateBucket(bucketId, bucketType);  // returns promise
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.deleteFileVersion" id="apidoc.element.backblaze-b2.b2.prototype.deleteFileVersion">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>deleteFileVersion
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteFileVersion = function (args) {
+    return actions.file.deleteFileVersion(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// download file by fileId
+b2.downloadFileById({
+  fileId: 'fileId',
+  onDownloadProgress: function(event) || null // progress monitoring
+});  // returns promise
+
+// delete file version
+b2.<span class="apidocCodeKeywordSpan">deleteFileVersion</span>({
+    fileId: 'fileId',
+    fileName: 'fileName'
+});  // returns promise
+
+// start large file
+b2.startLargeFile({
+  bucketId: 'bucketId',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.downloadFileById" id="apidoc.element.backblaze-b2.b2.prototype.downloadFileById">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>downloadFileById
+        <span class="apidocSignatureSpan">(fileId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">downloadFileById = function (fileId) {
+    return actions.file.downloadFileById(this, fileId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Always run `npm test` before you commit.
+
+### Upgrading from 0.9.x to 1.0.x
+
+For this update, we've switched the back end HTTP request library from `request` to `axios` as it has better Promise and progress
+ support built in. However, there are a couple changes that will break your code and ruin your day. Here are the changes:
+*  The Promise resolution has a different data structure. Where previously, the request response data was the root object in the
+ promise resolution (`res`), this data now resides in `res.data`.
+*  In v0.9.12, we added request progress reporting via the third parameter to `then()`. Because we are no longer using the same
+promise library, this functionality has been removed. However, progress reporting is still available by passing a callback function
+ into the `b2.method()` that you're calling. See the documentation below for details.
+* In v0.9.x, `b2.<span class="apidocCodeKeywordSpan">downloadFileById</span>()` accepted a `fileId` parameter as a String or Number
+. As of 1.0.0, the first parameter is now expected to be a plain Object of arguments.
+
+### Usage
+
+var B2 = require('backblaze-b2');
+
+// All functions on the b2 instance return the response from the B2 API in the success callback
+// i.e. b2.foo(...).then(function(b2JsonResponse) {})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.downloadFileByName" id="apidoc.element.backblaze-b2.b2.prototype.downloadFileByName">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>downloadFileByName
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">downloadFileByName = function (args) {
+    return actions.file.downloadFileByName(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    fileName: 'fileName'
+});  // returns promise
+
+// get file info
+b2.getFileInfo(fileId);  // returns promise
+
+// download file by name
+b2.<span class="apidocCodeKeywordSpan">downloadFileByName</span>({
+    bucketName: 'bucketName',
+    fileName: 'fileName',
+    onDownloadProgress: function(event) || null // progress monitoring
+});  // returns promise
+
+// download file by fileId
+b2.downloadFileById({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.finishLargeFile" id="apidoc.element.backblaze-b2.b2.prototype.finishLargeFile">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>finishLargeFile
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finishLargeFile = function (args) {
+    return actions.file.finishLargeFile(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  uploadUrl: 'uploadUrl',
+  uploadAuthToken: 'uploadAuthToken', // comes from getUploadPartUrl();
+  data: Buffer // this is expecting a Buffer not an encoded string,
+  onUploadProgress: function(event) || null // progress monitoring
+}) // returns promise
+
+// finish large file
+b2.<span class="apidocCodeKeywordSpan">finishLargeFile</span>({
+  fileId: 'fileId',
+  partSha1Array: [partSha1Array] // array of sha1 for each part
+}) // returns promise
+
+// cancel large file
+b2.cancelLargeFile({
+  fileId: 'fileId'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.getFileInfo" id="apidoc.element.backblaze-b2.b2.prototype.getFileInfo">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>getFileInfo
+        <span class="apidocSignatureSpan">(fileId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFileInfo = function (fileId) {
+    return actions.file.getFileInfo(this, fileId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// hide file
+b2.hideFile({
+    bucketId: 'bucketId',
+    fileName: 'fileName'
+});  // returns promise
+
+// get file info
+b2.<span class="apidocCodeKeywordSpan">getFileInfo</span>(fileId);  // returns promise
+
+// download file by name
+b2.downloadFileByName({
+    bucketName: 'bucketName',
+    fileName: 'fileName',
+    onDownloadProgress: function(event) || null // progress monitoring
+});  // returns promise
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.getUploadPartUrl" id="apidoc.element.backblaze-b2.b2.prototype.getUploadPartUrl">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>getUploadPartUrl
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUploadPartUrl = function (args) {
+    return actions.file.getUploadPartUrl(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// start large file
+b2.startLargeFile({
+  bucketId: 'bucketId',
+  fileName: 'fileName'
+}) // returns promise
+
+// get upload part url
+b2.<span class="apidocCodeKeywordSpan">getUploadPartUrl</span>({
+  fileId: 'fileId'
+}) // returns promise
+
+// get upload part
+b2.uploadPart({
+  partNumber: 'partNumber', // A number from 1 to 10000
+  uploadUrl: 'uploadUrl',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.getUploadUrl" id="apidoc.element.backblaze-b2.b2.prototype.getUploadUrl">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>getUploadUrl
+        <span class="apidocSignatureSpan">(bucketId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUploadUrl = function (bucketId) {
+    return actions.bucket.getUploadUrl(this, bucketId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// list buckets
+b2.listBuckets();  // returns promise
+
+// update bucket2
+b2.updateBucket(bucketId, bucketType);  // returns promise
+
+// get upload url
+b2.<span class="apidocCodeKeywordSpan">getUploadUrl</span>(bucketId);  // returns promise
+
+// upload file
+b2.uploadFile({
+    uploadUrl: 'uploadUrl',
+    uploadAuthToken: 'uploadAuthToken',
+    filename: 'filename',
+    mime: '', // optonal mime type, will default to 'b2/x-auto' if not provided
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.hideFile" id="apidoc.element.backblaze-b2.b2.prototype.hideFile">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>hideFile
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hideFile = function (args) {
+    return actions.file.hideFile(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+b2.listFileVersions({
+    bucketId: 'bucketId',
+    startFileName: 'startFileName',
+    maxFileCount: 100
+});  // returns promise
+
+// hide file
+b2.<span class="apidocCodeKeywordSpan">hideFile</span>({
+    bucketId: 'bucketId',
+    fileName: 'fileName'
+});  // returns promise
+
+// get file info
+b2.getFileInfo(fileId);  // returns promise
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.listBuckets" id="apidoc.element.backblaze-b2.b2.prototype.listBuckets">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listBuckets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listBuckets = function () {
+    return actions.bucket.list(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  bucketType // one of `allPublic`, `allPrivate`
+);  // returns promise
+
+// delete bucket
+b2.deleteBucket(bucketId);  // returns promise
+
+// list buckets
+b2.<span class="apidocCodeKeywordSpan">listBuckets</span>();  // returns promise
+
+// update bucket2
+b2.updateBucket(bucketId, bucketType);  // returns promise
+
+// get upload url
+b2.getUploadUrl(bucketId);  // returns promise
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.listFileNames" id="apidoc.element.backblaze-b2.b2.prototype.listFileNames">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listFileNames
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listFileNames = function (args) {
+    return actions.file.listFileNames(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        key1: value
+        key2: value
+    },
+    onUploadProgress: function(event) || null // progress monitoring
+});  // returns promise
+
+// list file names
+b2.<span class="apidocCodeKeywordSpan">listFileNames</span>({
+    bucketId: 'bucketId',
+    startFileName: 'startFileName',
+    maxFileCount: 100,
+    delimiter: '',
+    prefix: ''
+});  // returns promise
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.listFileVersions" id="apidoc.element.backblaze-b2.b2.prototype.listFileVersions">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listFileVersions
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listFileVersions = function (args) {
+    return actions.file.listFileVersions(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    startFileName: 'startFileName',
+    maxFileCount: 100,
+    delimiter: '',
+    prefix: ''
+});  // returns promise
+
+// list file versions
+b2.<span class="apidocCodeKeywordSpan">listFileVersions</span>({
+    bucketId: 'bucketId',
+    startFileName: 'startFileName',
+    maxFileCount: 100
+});  // returns promise
+
+// hide file
+b2.hideFile({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.listParts" id="apidoc.element.backblaze-b2.b2.prototype.listParts">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listParts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notYetImplemented() {
+    var deferred = q.defer();
+
+    deferred.reject('Feature not yet implemented');
+
+    return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.listUnfinishedLargeFiles" id="apidoc.element.backblaze-b2.b2.prototype.listUnfinishedLargeFiles">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>listUnfinishedLargeFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notYetImplemented() {
+    var deferred = q.defer();
+
+    deferred.reject('Feature not yet implemented');
+
+    return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.startLargeFile" id="apidoc.element.backblaze-b2.b2.prototype.startLargeFile">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>startLargeFile
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startLargeFile = function (args) {
+    return actions.file.startLargeFile(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// delete file version
+b2.deleteFileVersion({
+    fileId: 'fileId',
+    fileName: 'fileName'
+});  // returns promise
+
+// start large file
+b2.<span class="apidocCodeKeywordSpan">startLargeFile</span>({
+  bucketId: 'bucketId',
+  fileName: 'fileName'
+}) // returns promise
+
+// get upload part url
+b2.getUploadPartUrl({
+  fileId: 'fileId'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.updateBucket" id="apidoc.element.backblaze-b2.b2.prototype.updateBucket">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>updateBucket
+        <span class="apidocSignatureSpan">(bucketId, bucketType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateBucket = function (bucketId, bucketType) {
+    return actions.bucket.update(this, bucketId, bucketType);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// delete bucket
+b2.deleteBucket(bucketId);  // returns promise
+
+// list buckets
+b2.listBuckets();  // returns promise
+
+// update bucket2
+b2.<span class="apidocCodeKeywordSpan">updateBucket</span>(bucketId, bucketType);  // returns promise
+
+// get upload url
+b2.getUploadUrl(bucketId);  // returns promise
+
+// upload file
+b2.uploadFile({
+    uploadUrl: 'uploadUrl',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.uploadFile" id="apidoc.element.backblaze-b2.b2.prototype.uploadFile">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>uploadFile
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uploadFile = function (args) {
+    return actions.file.uploadFile(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// update bucket2
+b2.updateBucket(bucketId, bucketType);  // returns promise
+
+// get upload url
+b2.getUploadUrl(bucketId);  // returns promise
+
+// upload file
+b2.<span class="apidocCodeKeywordSpan">uploadFile</span>({
+    uploadUrl: 'uploadUrl',
+    uploadAuthToken: 'uploadAuthToken',
+    filename: 'filename',
+    mime: '', // optonal mime type, will default to 'b2/x-auto' if not provided
+    data: 'data' // this is expecting a Buffer not an encoded string,
+    info: {
+        // optional info headers, prepended with X-Bz-Info- when sent, throws error if more than 10 keys set
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.b2.prototype.uploadPart" id="apidoc.element.backblaze-b2.b2.prototype.uploadPart">
+        function <span class="apidocSignatureSpan">backblaze-b2.b2.prototype.</span>uploadPart
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uploadPart = function (args) {
+    return actions.file.uploadPart(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// get upload part url
+b2.getUploadPartUrl({
+  fileId: 'fileId'
+}) // returns promise
+
+// get upload part
+b2.<span class="apidocCodeKeywordSpan">uploadPart</span>({
+  partNumber: 'partNumber', // A number from 1 to 10000
+  uploadUrl: 'uploadUrl',
+  uploadAuthToken: 'uploadAuthToken', // comes from getUploadPartUrl();
+  data: Buffer // this is expecting a Buffer not an encoded string,
+  onUploadProgress: function(event) || null // progress monitoring
+}) // returns promise
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backblaze-b2.headers" id="apidoc.module.backblaze-b2.headers">module backblaze-b2.headers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.headers.addBzHeaders" id="apidoc.element.backblaze-b2.headers.addBzHeaders">
+        function <span class="apidocSignatureSpan">backblaze-b2.headers.</span>addBzHeaders
+        <span class="apidocSignatureSpan">(headers, targetObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addBzHeaders = function (headers, targetObj) {
+    var keys = Object.keys(headers);
+
+    return keys.filter(isBzHeader)
+        .map(getKeyObj)
+        .map(setKeyValue);
+
+    function isBzHeader(header) {
+        return /^X-Bz-/i.test(header);
+    }
+
+    function getKeyObj(header) {
+        var replacement = /^X-Bz-Info-/i.test(header) ? /X-Bz-Info-/i : /X-Bz-/i;
+        return {
+            original: header,
+            header: camelCase(header.replace(replacement, ''))
+        };
+    }
+
+    function setKeyValue(headerObj) {
+        targetObj[headerObj.header] = headers[headerObj.original];
+    }
+
+    function camelCase(header) {
+        return header.split('-')
+            .map(firstLetterCapitalise)
+            .join('');
+    }
+
+    function firstLetterCapitalise(word, index) {
+        if (index === 0) { // skip first letter
+            return word;
+        }
+        return word[0].toUpperCase() + word.substr(1);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.headers.addInfoHeaders" id="apidoc.element.backblaze-b2.headers.addInfoHeaders">
+        function <span class="apidocSignatureSpan">backblaze-b2.headers.</span>addInfoHeaders
+        <span class="apidocSignatureSpan">(options, info)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addInfoHeaders = function (options, info) {
+    var MAX_INFO_HEADERS = conf.MAX_INFO_HEADERS;
+    var invalidKeys = [];
+    if (info) {
+        var keys = Object.keys(info);
+
+        if (keys.length &gt; MAX_INFO_HEADERS) {
+            throw new Error('Too many info headers: maximum of ' + MAX_INFO_HEADERS + ' allowed');
+        }
+
+        keys.forEach(addInfoHeader);
+
+        if (invalidKeys.length) {
+            throw new Error('Info header keys contain invalid characters: ' + invalidKeys.join('   '));
+        }
+    }
+
+    function isValidHeader(header) {
+        return /^[a-z0-9\-]+$/i.test(header);
+    }
+
+    function addInfoHeader(infoKey) {
+        if (isValidHeader(infoKey)) {
+            var key = 'X-Bz-Info-' + infoKey;
+            options.headers[key] = encodeURIComponent(info[infoKey]);
+        } else {
+            return invalidKeys.push(infoKey);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backblaze-b2.request" id="apidoc.module.backblaze-b2.request">module backblaze-b2.request</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.request.getInstance" id="apidoc.element.backblaze-b2.request.getInstance">
+        function <span class="apidocSignatureSpan">backblaze-b2.request.</span>getInstance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInstance = function () {
+    return REQUEST || require('axios');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var REQUEST;
+
+exports.setup = function(requestObject) {
+    REQUEST = requestObject;
+};
+
+exports.sendRequest = function(options) {
+    var requestInstance = exports.<span class="apidocCodeKeywordSpan">getInstance</span>();
+    return requestInstance(options, utils.processResponseGeneric());
+};
+
+exports.getInstance = function() {
+    return REQUEST || require('axios');
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.request.sendRequest" id="apidoc.element.backblaze-b2.request.sendRequest">
+        function <span class="apidocSignatureSpan">backblaze-b2.request.</span>sendRequest
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendRequest = function (options) {
+    var requestInstance = exports.getInstance();
+    return requestInstance(options, utils.processResponseGeneric());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.request.setup" id="apidoc.element.backblaze-b2.request.setup">
+        function <span class="apidocSignatureSpan">backblaze-b2.request.</span>setup
+        <span class="apidocSignatureSpan">(requestObject)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (requestObject) {
+    REQUEST = requestObject;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backblaze-b2.utils" id="apidoc.module.backblaze-b2.utils">module backblaze-b2.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.utils.getAuthHeaderObject" id="apidoc.element.backblaze-b2.utils.getAuthHeaderObject">
+        function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getAuthHeaderObject
+        <span class="apidocSignatureSpan">(accountId, applicationKey)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthHeaderObject = function (accountId, applicationKey) {
+    if (!accountId) {
+        throw new Error('Invalid accountId');
+    }
+    if (!applicationKey) {
+        throw new Error('Invalid applicationKey');
+    }
+    var base64 = new Buffer(accountId + ':' + applicationKey).toString('base64');
+    return {
+        Authorization: 'Basic ' + base64
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.utils.getAuthHeaderObjectWithToken" id="apidoc.element.backblaze-b2.utils.getAuthHeaderObjectWithToken">
+        function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getAuthHeaderObjectWithToken
+        <span class="apidocSignatureSpan">(b2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthHeaderObjectWithToken = function (b2) {
+    if (!b2) {
+        throw new Error('Invalid B2 instance');
+    }
+    if (!b2.authorizationToken) {
+        throw new Error('Invalid authorizationToken');
+    }
+    return {
+        Authorization: b2.authorizationToken
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.utils.getProcessFileSuccess" id="apidoc.element.backblaze-b2.utils.getProcessFileSuccess">
+        function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getProcessFileSuccess
+        <span class="apidocSignatureSpan">(deferred)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getProcessFileSuccess = function (deferred) {
+    return function(error, response, body, promise) {
+        deferred = deferred || promise;
+        if (error) {
+            deferred.reject(error);
+        } else if (response.statusCode !== 200) {
+            deferred.reject(response.statusMessage);
+        } else {
+            deferred.resolve(response);
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.utils.getUrlEncodedFileName" id="apidoc.element.backblaze-b2.utils.getUrlEncodedFileName">
+        function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>getUrlEncodedFileName
+        <span class="apidocSignatureSpan">(fileName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUrlEncodedFileName = function (fileName) {
+    return fileName.split('/')
+        .map(encodeURIComponent)
+        .join('/');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.utils.parseJson" id="apidoc.element.backblaze-b2.utils.parseJson">
+        function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>parseJson
+        <span class="apidocSignatureSpan">(jsonString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseJson = function (jsonString) {
+    try {
+        return JSON.parse(jsonString);
+    } catch (e) {
+        // got error
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.processResponseGeneric = function (deferred) {
+return function(error, response, body, promise) {
+    deferred = deferred || promise;
+    if (error) {
+        return deferred.reject(error);
+    } else {
+        var genericResponse = exports.<span class="apidocCodeKeywordSpan">parseJson</span>(body);
+        deferred.resolve(genericResponse);
+    }
+};
+};
+
+exports.getUrlEncodedFileName = function(fileName) {
+return fileName.split('/')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.utils.processResponseGeneric" id="apidoc.element.backblaze-b2.utils.processResponseGeneric">
+        function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>processResponseGeneric
+        <span class="apidocSignatureSpan">(deferred)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processResponseGeneric = function (deferred) {
+    return function(error, response, body, promise) {
+        deferred = deferred || promise;
+        if (error) {
+            return deferred.reject(error);
+        } else {
+            var genericResponse = exports.parseJson(body);
+            deferred.resolve(genericResponse);
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.setup = function(requestObject) {
+    REQUEST = requestObject;
+};
+
+exports.sendRequest = function(options) {
+    var requestInstance = exports.getInstance();
+    return requestInstance(options, utils.<span class="apidocCodeKeywordSpan">processResponseGeneric</span>());
+};
+
+exports.getInstance = function() {
+    return REQUEST || require('axios');
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backblaze-b2.utils.saveAuthContext" id="apidoc.element.backblaze-b2.utils.saveAuthContext">
+        function <span class="apidocSignatureSpan">backblaze-b2.utils.</span>saveAuthContext
+        <span class="apidocSignatureSpan">(context, authResponse)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveAuthContext = function (context, authResponse) {
+    context.authorizationToken = authResponse.authorizationToken;
+    context.apiUrl = authResponse.apiUrl;
+    context.downloadUrl = authResponse.downloadUrl;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
