@@ -81,15 +81,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.backblaze-b2.toString">
-            function <span class="apidocSignatureSpan">backblaze-b2.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backblaze-b2.</span>b2.prototype</span>
 
         </li>
@@ -486,38 +477,6 @@
     this.downloadUrl = null;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.backblaze-b2.toString" id="apidoc.element.backblaze-b2.toString">
-        function <span class="apidocSignatureSpan">backblaze-b2.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-exports.getAuthHeaderObject = function(accountId, applicationKey) {
-if (!accountId) {
-    throw new Error(&#x27;Invalid accountId&#x27;);
-}
-if (!applicationKey) {
-    throw new Error(&#x27;Invalid applicationKey&#x27;);
-}
-var base64 = new Buffer(accountId + &#x27;:&#x27; + applicationKey).<span class="apidocCodeKeywordSpan">toString</span>(&#x27;base64
-&#x27;);
-return {
-    Authorization: &#x27;Basic &#x27; + base64
-};
-};
-
-exports.getAuthHeaderObjectWithToken = function(b2) {
-if (!b2) {
-...</pre></li>
     </ul>
 
 
