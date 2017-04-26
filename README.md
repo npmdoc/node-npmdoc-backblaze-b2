@@ -1,6 +1,6 @@
 # npmdoc-backblaze-b2
 
-#### api documentation for  [backblaze-b2 (v1.0.0)](https://github.com/yakovkhalinsky/backblaze-b2)  [![npm package](https://img.shields.io/npm/v/npmdoc-backblaze-b2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-backblaze-b2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-backblaze-b2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-backblaze-b2)
+#### basic api documentation for  [backblaze-b2 (v1.0.2)](https://github.com/yakovkhalinsky/backblaze-b2)  [![npm package](https://img.shields.io/npm/v/npmdoc-backblaze-b2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-backblaze-b2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-backblaze-b2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-backblaze-b2)
 
 #### Node.js Library for the Backblaze B2 Storage Service
 
@@ -28,9 +28,9 @@
         "url": "https://github.com/yakovkhalinsky/backblaze-b2/issues"
     },
     "dependencies": {
-        "axios": "^0.15.3",
-        "node-sha1": "^1.0.1",
-        "q": "^1.4.1"
+        "axios": "^0.16.1",
+        "q": "^1.4.1",
+        "sha1": "^1.1.0"
     },
     "description": "Node.js Library for the Backblaze B2 Storage Service",
     "devDependencies": {
@@ -40,10 +40,10 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "245fa5a05bf022a5a3e2aa3a641808a67aded4f2",
-        "tarball": "https://registry.npmjs.org/backblaze-b2/-/backblaze-b2-1.0.0.tgz"
+        "shasum": "e43b07082fcb8f252552d25c9231137df54fef04",
+        "tarball": "https://registry.npmjs.org/backblaze-b2/-/backblaze-b2-1.0.2.tgz"
     },
-    "gitHead": "04f2dd78f63d5aab27e85b4d39eb74bc484ee3ff",
+    "gitHead": "136d66f0f4a7e227ceb57475b3a0717d2cd0a8be",
     "homepage": "https://github.com/yakovkhalinsky/backblaze-b2",
     "keywords": [
         "backblaze",
@@ -70,7 +70,8 @@
         "test": "npm run lint-all && npm run test-unit",
         "test-unit": "mocha \"test/**/*Test.js\""
     },
-    "version": "1.0.0"
+    "version": "1.0.2",
+    "bin": {}
 }
 ```
 
